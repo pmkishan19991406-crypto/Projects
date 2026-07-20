@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Dashboard</title>
+</head>
+
+<body bgcolor="lightcyan">
+
+<h1 align="center">Employee Dashboard</h1>
+
+<form>
+
+<table align="center" border="1" cellpadding="8">
+
+<tr>
+<td>Department</td>
+<td>
+<select id="department">
+<option>IT</option>
+<option>HR</option>
+<option>SALES</option>
+<option>ADMIN</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Start Date</td>
+<td>
+<input type="date" id="startDate">
+</td>
+</tr>
+
+<tr>
+<td>End Date</td>
+<td>
+<input type="date" id="endDate">
+</td>
+</tr>
+
+<tr>
+<td>Reason</td>
+<td>
+<textarea id="reason" rows="4" cols="25"></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="Apply Leave" onclick="applyLeave()">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="View My Leaves" onclick="viewMyLeaves()">
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<a href="index.html">Logout</a>
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<br><br>
+
+<h2 align="center">My Leave History</h2>
+
+<table align="center" border="1" cellpadding="8" id="leaveTable">
+
+<tr>
+<th>Leave ID</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Reason</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+
+</table>
+
+<script src="js/employee.js"></script>
+
+</body>
+</html>

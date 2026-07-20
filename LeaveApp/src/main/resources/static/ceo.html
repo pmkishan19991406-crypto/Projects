@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CEO Dashboard</title>
+</head>
+
+<body bgcolor="orange">
+
+<h2 align="center">CEO Dashboard</h2>
+
+<p align="center">
+
+<input type="button"
+       value="View Employees"
+       onclick="loadEmployees()">
+
+<input type="button"
+       value="View All Leaves"
+       onclick="loadLeaves()">
+
+</p>
+
+<h3 align="center">Employees</h3>
+
+<table align="center"
+       border="1"
+       cellpadding="8"
+       id="empTable">
+
+<tr>
+
+<th>ID</th>
+<th>Name</th>
+<th>Age</th>
+<th>Department</th>
+<th>Role</th>
+<th>Email</th>
+
+</tr>
+
+</table>
+
+<br><br>
+
+<h3 align="center">Leave Requests</h3>
+
+<table align="center"
+       border="1"
+       cellpadding="8"
+       id="leaveTable">
+
+<tr>
+
+<th>Leave ID</th>
+<th>Employee ID</th>
+<th>Department</th>
+<th>Start Date</th>
+<th>End Date</th>
+<th>Reason</th>
+<th>Status</th>
+
+</tr>
+
+</table>
+
+<br>
+
+<p align="center">
+<a href="index.html">Logout</a>
+</p>
+
+<script src="js/ceo.js"></script>
+
+</body>
+</html>
