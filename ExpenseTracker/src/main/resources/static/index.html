@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Expense Tracker</title>
+
+</head>
+
+
+<body style="font-family:Arial;
+             margin:0;
+             background:whitesmoke;">
+
+    <!-- Header -->
+
+    <div style="background:darkslategray;
+                color:white;
+                padding:25px;
+                text-align:center;">
+
+        <h1>Expense Tracker</h1>
+
+        <p>Track and manage your daily expenses</p>
+
+    </div>
+
+
+    <!-- Dashboard -->
+
+    <div style="background:white;
+                margin:20px;
+                padding:20px;
+                border-radius:8px;">
+
+        <h2>Dashboard</h2>
+
+        <div style="display:flex;
+                    gap:20px;
+                    flex-wrap:wrap;">
+
+            <div style="background:lightblue;
+                        padding:20px;
+                        min-width:180px;
+                        text-align:center;">
+
+                <h3>Total Expenses</h3>
+
+                <h2 id="totalCount">0</h2>
+
+            </div>
+
+
+            <div style="background:lightgreen;
+                        padding:20px;
+                        min-width:180px;
+                        text-align:center;">
+
+                <h3>Total Amount</h3>
+
+                <h2 id="totalAmount">₹0</h2>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Add Expense -->
+
+    <div style="background:white;
+                margin:20px;
+                padding:20px;
+                border-radius:8px;">
+
+        <h2>Add Expense</h2>
+
+        <input type="text"
+               id="title"
+               placeholder="Expense Title"
+               style="padding:10px;
+                      margin:5px;">
+
+        <input type="text"
+               id="category"
+               placeholder="Category"
+               style="padding:10px;
+                      margin:5px;">
+
+        <input type="number"
+               id="amount"
+               placeholder="Amount"
+               style="padding:10px;
+                      margin:5px;">
+
+        <input type="date"
+               id="expenseDate"
+               style="padding:10px;
+                      margin:5px;">
+
+        <button id="saveButton"
+                onclick="addExpense()"
+                style="padding:10px 15px;
+                       margin:5px;
+                       cursor:pointer;">
+
+            Add Expense
+
+        </button>
+
+    </div>
+
+
+    <!-- Expense Table -->
+
+    <div style="background:white;
+                margin:20px;
+                padding:20px;
+                border-radius:8px;">
+
+        <h2>Expenses</h2>
+
+        <table style="width:100%;
+                      border-collapse:collapse;">
+
+            <thead>
+
+                <tr>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        ID
+                    </th>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        Title
+                    </th>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        Category
+                    </th>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        Amount
+                    </th>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        Date
+                    </th>
+
+                    <th style="padding:10px;
+                               border-bottom:1px solid lightgray;">
+                        Actions
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody id="expenseTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
